@@ -16,7 +16,8 @@
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
     # Hyprpanel
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 
