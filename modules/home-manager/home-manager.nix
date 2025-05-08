@@ -2,6 +2,12 @@
 
   home.stateVersion = "24.11";
 
-  imports = [ ./cli/fish.nix ./desktop/gnome.nix ./kitty.nix ./git.nix ];
+  imports = [
+    ./desktop/hypr/hyprland.nix
+    ./cli/fish.nix
+    ./desktop/gnome.nix
+    ./kitty.nix
+    ./git.nix
+  ];
 
 }
