@@ -100,6 +100,7 @@
     jetbrains.webstorm
     bruno
     qbittorrent
+    inputs.zen-browser.packages.${system}.default
 
     # CLI
     nixd # Nix language server
@@ -120,7 +121,11 @@
     fastfetch
     duf
     dua
-    inputs.zen-browser.packages.${system}.default
+
+    # Hyprland
+    hyprland
+    hyprpaper
+    inputs.hyprpanel.packages.${system}.default
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
