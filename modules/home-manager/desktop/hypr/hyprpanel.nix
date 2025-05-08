@@ -1,6 +1,7 @@
-{ lib, pkgs, config, ... }: {
+{ inputs, ... }: {
 
   home.stateVersion = "24.11";
+  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 
   programs.hyprpanel = {
     enable = true;
