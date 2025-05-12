@@ -2,6 +2,9 @@
 
   home.stateVersion = "24.11";
 
-  imports = [ ./hyprpanel.nix ];
+  imports = [
+    #./hyprpanel.nix 
+    ./wofi.nix
+  ];
 
 }
