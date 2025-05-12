@@ -1,14 +1,13 @@
 { ... }: {
   programs.wofi = {
-    style=''
-  * {
-      font-family: monospace;
-  }
-  
-  window {
-      background-color: #7c818c;
-  }
-''
+    style = ''
+      * {
+          font-family: monospace;
+      }
 
+      window {
+         background-color: #282a36;
+      }
+    '';
   };
 }

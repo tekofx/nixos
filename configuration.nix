@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, home-manager, inputs, ... }: {
+{ config, pkgs, home-manager, inputs, stylix, ... }: {
   system.stateVersion = "24.11"; # Did you read the comment?
 
   # Bootloader.
@@ -140,6 +140,17 @@
     slurp
     wl-clipboard
   ];
+
+  # Stylix
+  stylix = {
+    enable = true;
+    image = pkgs.fetchurl {
+      url =
+        "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
+      sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
+    };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
