@@ -134,7 +134,7 @@
     hyprland
     hyprpaper
     wofi
-    inputs.hyprpanel.packages.${system}.default
+    hyprpanel
     nerdfonts
     grim
     slurp

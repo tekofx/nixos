@@ -7,6 +7,7 @@
   config = {
 
     home-manager.useGlobalPkgs = true;
+    home-manager.extraSpecialArgs = { inherit inputs; };
     home-manager.backupFileExtension = "back";
 
     # Define user groups
@@ -26,7 +27,6 @@
       openssh.authorizedKeys.keys = [ ];
     };
     home-manager.users.teko = import ./home-manager/home-manager.nix;
-    
 
     # Work user
     users.users.work = {

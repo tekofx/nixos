@@ -7,12 +7,14 @@
     enable = true;
     hyprland.enable = true;
 
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          left = [ "dashboard" "workspaces" ];
-          middle = [ "media" ];
-          right = [ "volume" "systray" "notifications" ];
+    settings = {
+      layout = {
+        "bar.layouts" = {
+          "0" = {
+            left = [ "dashboard" "workspaces" ];
+            middle = [ "media" ];
+            right = [ "volume" "systray" "notifications" ];
+          };
         };
       };
     };

@@ -30,12 +30,16 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        # Stylix
-        stylix.homeManagerModules.stylix
-        stylix.nixosModules.stylix
-
         ./configuration.nix
+
+        # Home manager
         inputs.home-manager.nixosModules.default
+
+        # Stylix
+        inputs.stylix.nixosModules.stylix
+
+        { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+
       ];
     };
   };

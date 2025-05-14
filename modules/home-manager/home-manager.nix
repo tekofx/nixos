@@ -8,7 +8,6 @@
     ./desktop/gnome.nix
     ./kitty.nix
     ./git.nix
-    ./stylix.nix
   ];
 
 }
