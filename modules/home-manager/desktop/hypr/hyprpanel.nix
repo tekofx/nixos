@@ -15,9 +15,11 @@
 
           layouts = {
             "0" = {
-              left = [ "dashboard" "workspaces" ];
-              middle = [ "media" ];
+              left = [ "dashboard" "workspaces" "separator" "media" ];
+              middle = [ ];
               right = [
+                "cpu"
+                "separator"
                 "network"
                 "battery"
                 "volume"
@@ -30,6 +32,7 @@
         };
         menus = {
           dashboard = {
+            "powermenu.avatar.image" = "/home/teko/.nixos/profile.jpg";
             shortcuts = {
               enabled = true;
               left = {
@@ -56,7 +59,12 @@
               };
             };
           };
+          clock = {
+            time = { military = true; };
+
+          };
         };
+
         theme = {
           bar = {
             transparent = true;
@@ -64,9 +72,16 @@
             buttons = {
               padding_y = "0em";
               y_margins = "0.2em";
+              separator = {
+                width = "0em";
+                margins = "0.3em";
+              };
             };
+            "menus.menu.dashboard.profile.radius" = "10em";
           };
+          "font.size" = "1rem";
         };
+
       };
     };
   };
