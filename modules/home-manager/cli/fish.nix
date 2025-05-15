@@ -12,6 +12,7 @@
     shellAliases = {
       dc = "docker compose";
       gc = "git commit -m";
+      gs = "git status";
 
     };
 
