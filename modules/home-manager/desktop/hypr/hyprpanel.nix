@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
 
   home.stateVersion = "24.11";
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
@@ -11,6 +11,8 @@
     settings = {
       layout = {
         bar = {
+          "launcher.icon" = "󱄅";
+
           clock = { format = "%a %d/%m/%Y  %H:%M"; };
 
           layouts = {
@@ -32,7 +34,10 @@
         };
         menus = {
           dashboard = {
-            "powermenu.avatar.image" = "/home/teko/.nixos/profile.jpg";
+            "powermenu.avatar.image" = pkgs.fetchurl {
+              url = "https://avatars.githubusercontent.com/u/49290914?v=4";
+              sha256 = "QBcliw6ifW3yYqpYibgkVfNxpXUdJPPFtAMN703B+Ik=";
+            };
             shortcuts = {
               enabled = true;
               left = {
