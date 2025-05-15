@@ -4,10 +4,10 @@
 
   imports = [
     ./desktop/hypr/hyprland.nix
-    ./cli/fish.nix
     ./desktop/gnome.nix
     ./kitty.nix
-    ./git.nix
+    ./cli/fish.nix
+    ./cli/git.nix
   ];
 
 }
