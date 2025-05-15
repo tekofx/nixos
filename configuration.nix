@@ -145,9 +145,8 @@
   stylix = {
     enable = true;
     image = pkgs.fetchurl {
-      url =
-        "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-      sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
+      url = "https://techraptor.net/sites/default/files/2021-11/Mistborn.jpg";
+      sha256 = "4atLVJGjiNongRduH7U8DqcalaM2BS65Roqrfs1CZbU=";
     };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
   };
