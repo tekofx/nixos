@@ -17,6 +17,7 @@
       show-battery-percentage = true;
     };
 
+    ############################ Keybindings ############################
     # System keybindings
     "org/gnome/desktop/wm/keybindings" = {
       switch-to-workspace-1 = [ "<Super>1" ];
@@ -39,6 +40,7 @@
       name = "Open Kitty";
     };
 
+    ############################ Gnome Shell ############################
     "org/gnome/shell" = {
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -65,7 +67,11 @@
       ];
     };
 
-    ## Extensions config
+    "org/gnome/shell/app-switcher/current-workspace-only" = true;
+    "org/gnome/desktop/interface/enable-hot-corners" = true;
+    "org/gnome/mutter/dynamic-workspaces" = true;
+
+    ############################ Extensions config ############################
     "org/gnome/shell/extensions/mediacontrols" = {
       elements-order = [ "ICON" "CONTROLS" "LABEL" ];
       show-control-icons-seek-backward = false;
