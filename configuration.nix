@@ -177,8 +177,6 @@
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./modules/gnome.nix
-    ./modules/profiles/teko.nix
-    ./modules/profiles/work.nix
   ];
 
 }

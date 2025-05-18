@@ -39,6 +39,8 @@
         inputs.stylix.nixosModules.stylix
 
         { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+        ./modules/profiles/teko.nix
+        ./modules/profiles/work.nix
 
       ];
     };

@@ -1,11 +1,7 @@
 { pkgs, lib, config, inputs, home-manager, ... }: {
 
-  ## Modules to import
-  imports = [ ];
-
   ## Configuration
   config = {
-
     home-manager.useGlobalPkgs = true;
     home-manager.extraSpecialArgs = { inherit inputs; };
     home-manager.backupFileExtension = "back";
@@ -26,8 +22,6 @@
       openssh.authorizedKeys.keys = [ ];
     };
     home-manager.users.teko = import ../home-manager/home-manager.nix;
-
-    home.file.".face" = { source = ../../profile.jpg; };
 
   };
 }
