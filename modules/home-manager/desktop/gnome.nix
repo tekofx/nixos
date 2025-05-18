@@ -51,6 +51,7 @@
         "webstorm.desktop"
         "bruno.desktop"
         "org.telegram.desktop.desktop"
+
         "discord.desktop"
         "spotify.desktop"
       ];
@@ -67,9 +68,8 @@
       ];
     };
 
-    "org/gnome/shell/app-switcher/current-workspace-only" = true;
-    "org/gnome/desktop/interface/enable-hot-corners" = true;
-    "org/gnome/mutter/dynamic-workspaces" = true;
+    #"org/gnome/shell/app-switcher/current-workspace-only" = true ;
+    #"org/gnome/mutter/dynamic-workspaces" = true;
 
     ############################ Extensions config ############################
     "org/gnome/shell/extensions/mediacontrols" = {
