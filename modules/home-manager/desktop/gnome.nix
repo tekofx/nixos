@@ -10,15 +10,12 @@
   gtk.cursorTheme.name = lib.mkForce "Bibata-Modern-Ice";
 
   dconf.settings = {
-    /* "org/gnome/desktop/interface" = {
-         color-scheme = "prefer-dark";
-         cursor-theme = "Bibata-Modern-Ice";
-         enable-hot-corners = true;
-         icon-theme = "Papirus-Dark";
-         gtk-theme = "Adwaita-dark";
-         show-battery-percentage = true;
-       };
-    */
+    "org/gnome/desktop/interface" = {
+      cursor-theme = "Bibata-Modern-Ice";
+      enable-hot-corners = true;
+      icon-theme = "Papirus-Dark";
+      show-battery-percentage = true;
+    };
 
     # System keybindings
     "org/gnome/desktop/wm/keybindings" = {
