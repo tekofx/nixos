@@ -144,6 +144,7 @@
   # Stylix
   stylix = {
     enable = true;
+    autoEnable = true;
     image = pkgs.fetchurl {
       url = "https://techraptor.net/sites/default/files/2021-11/Mistborn.jpg";
       sha256 = "4atLVJGjiNongRduH7U8DqcalaM2BS65Roqrfs1CZbU=";
