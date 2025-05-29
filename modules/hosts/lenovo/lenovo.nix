@@ -34,6 +34,6 @@
     ./power-management.nix
 
     # Imported shared modules
-    ../../../profiles/workstation.nix
+    ../../profiles/workstation.nix
   ];
 }

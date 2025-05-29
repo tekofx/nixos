@@ -6,7 +6,9 @@
     ../users/work.nix
 
     ../nixos/desktop/gnome.nix
-    ../nixos/desktop/cli.nix
+    ../nixos/desktop/hyprland.nix
+
+    ../nixos/cli/cli.nix
 
   ];
 

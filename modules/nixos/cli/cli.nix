@@ -1,5 +1,9 @@
 # btop install
 { config, lib, pkgs, inputs, ... }: {
+
+  programs.fish.enable = true;
+  programs.starship.enable = true;
+
   environment.systemPackages = with pkgs; [
     nixd # Nix language server
     os-prober
