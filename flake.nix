@@ -30,9 +30,11 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          #./configuration.nix
 
           ./modules/hosts/lenovo/lenovo.nix
+
+          # Global settings
+          ./modules/global.nix
 
           # Home manager
           inputs.home-manager.nixosModules.default
@@ -40,12 +42,7 @@
           # Stylix
           inputs.stylix.nixosModules.stylix
 
-          {
-            nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
-          }
-          #./modules/users/teko.nix
-          #./modules/users/work.nix
-
+          { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
         ];
       };
     };
