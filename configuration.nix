@@ -109,6 +109,8 @@
     bruno
     qbittorrent
     inputs.zen-browser.packages.${system}.default
+    vlc
+    obs-studio
 
     # CLI
     nixd # Nix language server
@@ -129,6 +131,7 @@
     fastfetch
     duf
     dua
+    yt-dlp
 
     # Hyprland
     hyprland

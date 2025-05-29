@@ -9,6 +9,26 @@
   gtk.cursorTheme.package = lib.mkForce pkgs.bibata-cursors;
   gtk.cursorTheme.name = lib.mkForce "Bibata-Modern-Ice";
 
+  # File associations
+  xdg.mimeApps = {
+    enable = true;
+    associations.added = {
+      "text/plain" = [ "org.gnome.TextEditor.desktop" ];
+      "video/webm" = [ "vlc.desktop" ];
+      "video/mp4" = [ "vlc.desktop" ];
+      "video/x-matroska" = [ "vlc.desktop" ];
+    };
+    defaultApplications = {
+      "text/plain" = [ "org.gnome.TextEditor.desktop" ];
+      "video/webm" = [ "vlc.desktop" ];
+      "video/mp4" = [ "vlc.desktop" ];
+      "video/x-matroska" = [ "vlc.desktop" ];
+    };
+  };
+  /* xdg.configFile."mimeapps.list" =
+     lib.mkIf config.xdg.mimeApps.enable { force = true; };
+  */
+
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       cursor-theme = "Bibata-Modern-Ice";
@@ -16,6 +36,10 @@
       icon-theme = "Papirus-Dark";
       show-battery-percentage = true;
     };
+
+    ############################ Workspaces settings ############################
+    "org/gnome/shell/app-switcher" = { "current-workspace-only" = true; };
+    "org/gnome/mutter" = { "dynamic-workspaces" = true; };
 
     ############################ Keybindings ############################
     # System keybindings
@@ -51,7 +75,6 @@
         "webstorm.desktop"
         "bruno.desktop"
         "org.telegram.desktop.desktop"
-
         "discord.desktop"
         "spotify.desktop"
       ];
