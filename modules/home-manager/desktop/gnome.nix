@@ -91,9 +91,6 @@
       ];
     };
 
-    #"org/gnome/shell/app-switcher/current-workspace-only" = true ;
-    #"org/gnome/mutter/dynamic-workspaces" = true;
-
     ############################ Extensions config ############################
     "org/gnome/shell/extensions/mediacontrols" = {
       elements-order = [ "ICON" "CONTROLS" "LABEL" ];
