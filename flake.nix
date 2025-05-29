@@ -45,6 +45,20 @@
           { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
         ];
       };
+
+      vaio = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./modules/hosts/vaio/vaio.nix
+
+          # Global settings
+          ./modules/global.nix
+
+          # Home manager
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
   };
 }
