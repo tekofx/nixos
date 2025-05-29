@@ -25,24 +25,29 @@
   };
 
   outputs = { self, nixpkgs, stylix, ... }@inputs: {
-    # Please replace my-nixos with your hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./configuration.nix
+    nixosConfigurations = {
+      lenovo = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          #./configuration.nix
 
-        # Home manager
-        inputs.home-manager.nixosModules.default
+          ./modules/hosts/lenovo/lenovo.nix
 
-        # Stylix
-        inputs.stylix.nixosModules.stylix
+          # Home manager
+          inputs.home-manager.nixosModules.default
 
-        { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
-        ./modules/profiles/teko.nix
-        ./modules/profiles/work.nix
+          # Stylix
+          inputs.stylix.nixosModules.stylix
 
-      ];
+          {
+            nixpkgs.overlays = [ inputs.hyprpanel.overlay ];
+          }
+          #./modules/users/teko.nix
+          #./modules/users/work.nix
+
+        ];
+      };
     };
   };
 }
