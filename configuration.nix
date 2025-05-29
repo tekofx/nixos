@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, home-manager, inputs, stylix, ... }: {
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -65,7 +65,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -121,7 +121,7 @@
     vim
     neovim
     navi
-    nixfmt
+    nixfmt-classic
     fish
     starship
     yadm
@@ -138,7 +138,7 @@
     hyprpaper
     wofi
     hyprpanel
-    nerdfonts
+    nerd-fonts.roboto-mono
     grim
     slurp
     wl-clipboard
