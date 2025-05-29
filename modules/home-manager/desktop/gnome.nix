@@ -50,6 +50,12 @@
       switch-to-workspace-4 = [ "<Super>4" ];
     };
 
+    # Interactive screenshot
+    "org/gnome/shell/keybindings" = {
+      "show-screenshot-ui" = [ "<Shift><Super>s" ];
+      "screenshot" = [ "Print" ];
+    };
+
     # Custom Keybindings
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
