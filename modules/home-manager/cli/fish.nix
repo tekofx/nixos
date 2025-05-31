@@ -19,6 +19,8 @@
         --preview 'bat --color=always --style=header,grid --line-range :300 {}'
       "
 
+      navi widget fish | source
+
     '';
 
     shellAliases = {
