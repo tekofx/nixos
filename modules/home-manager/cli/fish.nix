@@ -32,9 +32,9 @@
       gs = "git status";
       gp = "git push";
 
-      # Exa
-      ls = "exa";
-      tree = "exa -T";
+      # Eza
+      ls = "eza";
+      tree = "eza -T";
     };
 
     plugins = [{
