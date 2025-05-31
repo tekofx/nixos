@@ -24,5 +24,6 @@
     duf
     dua
     yt-dlp
+    exa
   ];
 }
