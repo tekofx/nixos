@@ -24,10 +24,17 @@
     '';
 
     shellAliases = {
+      # Docker
       dc = "docker compose";
+
+      # Git
       gc = "git commit -m";
       gs = "git status";
+      gp = "git push";
 
+      # Exa
+      ls = "exa";
+      tree = "exa -T";
     };
 
     plugins = [{
