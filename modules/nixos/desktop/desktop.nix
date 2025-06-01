@@ -9,7 +9,7 @@
     qbittorrent
     inputs.zen-browser.packages.${system}.default
     vlc
-    obs-studio
+    stremio
 
     # Hyprland
     hyprland
@@ -33,14 +33,20 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
   };
 
+  # Enable flatpak
+  services.flatpak.enable = true;
+  services.flatpak.packages = [ "com.usebottles.bottles" ];
+
   imports = [
+    inputs.nix-flatpak.nixosModules.nix-flatpak
     # Desktop environments
     ./gnome.nix
     ./hyprland.nix
 
     # Programs
-    ./gaming.nix
-    ./development.nix
+    ../gaming.nix
+    ../development.nix
+    ../media-editing.nix
   ];
 
 }

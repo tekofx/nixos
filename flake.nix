@@ -25,6 +25,9 @@
     # Poly MC
     polymc.url = "github:PolyMC/PolyMC";
 
+    # Nix-flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
   };
 
   outputs = { self, nixpkgs, stylix, ... }@inputs: {
