@@ -10,4 +10,7 @@
 
   ];
 
+  services.flatpak.packages =
+    [ "io.github.MakovWait.Godots" "com.github.finefindus.eyedropper" ];
+
 }

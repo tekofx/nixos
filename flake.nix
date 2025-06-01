@@ -45,9 +45,6 @@
           # Home manager
           inputs.home-manager.nixosModules.default
 
-          # Stylix
-          inputs.stylix.nixosModules.stylix
-
           {
             nixpkgs.overlays =
               [ inputs.hyprpanel.overlay inputs.polymc.overlay ];

@@ -10,6 +10,7 @@
     inputs.zen-browser.packages.${system}.default
     vlc
     stremio
+    calibre
 
     # Hyprland
     hyprland
@@ -35,17 +36,14 @@
 
   # Enable flatpak
   services.flatpak.enable = true;
-  services.flatpak.packages = [
-    "com.usebottles.bottles"
-    "io.github.brunofin.Cohesion"
-    "com.github.finefindus.eyedropper"
-    "org.vinegarhq.Sober"
-    "io.github.MakovWait.Godots"
-    "page.kramo.Cartridges"
-  ];
+  services.flatpak.packages =
+    [ "com.usebottles.bottles" "io.github.brunofin.Cohesion" ];
 
   imports = [
     inputs.nix-flatpak.nixosModules.nix-flatpak
+    # Stylix
+    inputs.stylix.nixosModules.stylix
+
     # Desktop environments
     ./gnome.nix
     ./hyprland.nix
