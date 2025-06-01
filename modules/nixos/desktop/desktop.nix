@@ -35,7 +35,14 @@
 
   # Enable flatpak
   services.flatpak.enable = true;
-  services.flatpak.packages = [ "com.usebottles.bottles" ];
+  services.flatpak.packages = [
+    "com.usebottles.bottles"
+    "io.github.brunofin.Cohesion"
+    "com.github.finefindus.eyedropper"
+    "org.vinegarhq.Sober"
+    "io.github.MakovWait.Godots"
+    "page.kramo.Cartridges"
+  ];
 
   imports = [
     inputs.nix-flatpak.nixosModules.nix-flatpak
