@@ -25,5 +25,6 @@
     dua
     yt-dlp
     eza
+    jq
   ];
 }
