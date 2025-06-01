@@ -22,6 +22,9 @@
     # Stylix
     stylix.url = "github:danth/stylix/release-25.05";
 
+    # Poly MC
+    polymc.url = "github:PolyMC/PolyMC";
+
   };
 
   outputs = { self, nixpkgs, stylix, ... }@inputs: {
@@ -42,7 +45,10 @@
           # Stylix
           inputs.stylix.nixosModules.stylix
 
-          { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
+          {
+            nixpkgs.overlays =
+              [ inputs.hyprpanel.overlay inputs.polymc.overlay ];
+          }
         ];
       };
 

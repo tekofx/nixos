@@ -2,16 +2,10 @@
 { config, lib, pkgs, inputs, ... }: {
 
   environment.systemPackages = with pkgs; [
-    vscodium
     kitty
-    zed-editor
     telegram-desktop
     discord
     spotify
-    steam
-    android-studio
-    jetbrains.webstorm
-    bruno
     qbittorrent
     inputs.zen-browser.packages.${system}.default
     vlc
@@ -40,10 +34,13 @@
   };
 
   imports = [
-
+    # Desktop environments
     ./gnome.nix
     ./hyprland.nix
 
+    # Programs
+    ./gaming.nix
+    ./development.nix
   ];
 
 }

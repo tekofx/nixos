@@ -128,6 +128,22 @@
       }
     },
     "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732722421,
+        "narHash": "sha256-HRJ/18p+WoXpWJkcdsk9St5ZiukCqSDgbOGFa8Okehg=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "9ed2ac151eada2306ca8c418ebd97807bb08f6ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-compat_2": {
       "locked": {
         "lastModified": 1733328505,
         "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
@@ -308,6 +324,22 @@
         "type": "github"
       }
     },
+    "libnbtplusplus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650031308,
+        "narHash": "sha256-TvVOjkUobYJD9itQYueELJX3wmecvEdCbJ0FinW2mL4=",
+        "owner": "PolyMC",
+        "repo": "libnbtplusplus",
+        "rev": "2203af7eeb48c45398139b583615134efd8d407f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PolyMC",
+        "repo": "libnbtplusplus",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1748437600,
@@ -325,6 +357,22 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1733064805,
+        "narHash": "sha256-7NbtSLfZO0q7MXPl5hzA0sbVJt6pWxxtGWbaVUDDmjs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "31d66ae40417bb13765b0ad75dd200400e98de84",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1747610100,
         "narHash": "sha256-rpR5ZPMkWzcnCcYYo3lScqfuzEw5Uyfh+R0EKZfroAc=",
@@ -366,11 +414,33 @@
         "type": "github"
       }
     },
+    "polymc": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "libnbtplusplus": "libnbtplusplus",
+        "nixpkgs": "nixpkgs_2",
+        "tomlplusplus": "tomlplusplus"
+      },
+      "locked": {
+        "lastModified": 1747157086,
+        "narHash": "sha256-axNPtGvKBSXJQWcQuFncZ4BftwPG7Z9peHUECw5b5CE=",
+        "owner": "PolyMC",
+        "repo": "PolyMC",
+        "rev": "40e2330308d2d16850fd052ecb82bd84ed633433",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PolyMC",
+        "repo": "PolyMC",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "hyprpanel": "hyprpanel",
         "nixpkgs": "nixpkgs",
+        "polymc": "polymc",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
       }
@@ -382,12 +452,12 @@
         "base16-helix": "base16-helix",
         "base16-vim": "base16-vim",
         "firefox-gnome-theme": "firefox-gnome-theme",
-        "flake-compat": "flake-compat",
+        "flake-compat": "flake-compat_2",
         "flake-parts": "flake-parts",
         "git-hooks": "git-hooks",
         "gnome-shell": "gnome-shell",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nur": "nur",
         "systems": "systems",
         "tinted-foot": "tinted-foot",
@@ -504,6 +574,22 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "tomlplusplus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731586115,
+        "narHash": "sha256-FLZvfbMN3PwmBOqvMUxQe96/Yukk0OAFPeDzHcBYZhk=",
+        "owner": "marzer",
+        "repo": "tomlplusplus",
+        "rev": "c4369ae1d8955cae20c4ab40b9813ef4b60e48be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "marzer",
+        "repo": "tomlplusplus",
         "type": "github"
       }
     },
