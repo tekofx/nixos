@@ -35,6 +35,9 @@
       # Eza
       ls = "eza";
       tree = "eza -T";
+
+      # Rm Improved
+      rm = "rip";
     };
 
     plugins = [{

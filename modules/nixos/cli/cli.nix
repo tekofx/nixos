@@ -26,5 +26,6 @@
     yt-dlp
     eza
     jq
+    rm-improved
   ];
 }
