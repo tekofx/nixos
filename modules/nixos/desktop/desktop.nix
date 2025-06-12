@@ -11,6 +11,7 @@
     vlc
     stremio
     calibre
+    librewolf
 
     # Hyprland
     hyprland
