@@ -25,7 +25,15 @@
             "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
           installation_mode = "force_installed";
         };
+        # AutoFXTwitter
+        "autofxtwitter@itsrqtl" = {
+          install_url =
+            "https://addons.mozilla.org/firefox/downloads/latest/autofxtwitter/latest.xpi";
+          installation_mode = "force_installed";
+
+        };
       };
+      DNSOverHTTPS = { Enabled = true; };
     };
     profiles.teko = {
       search = {
