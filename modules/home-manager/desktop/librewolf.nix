@@ -4,6 +4,14 @@
     enable = true;
     package = pkgs.librewolf;
     policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      DontCheckDefaultBrowser = true;
+      DisablePocket = true;
+      TranslateEnabled = false;
+      PasswordManagerEnabled = false;
+      DisabledFirefoxAccounts = true;
+      DisabledFirefoxStudies = true;
       ExtensionSettings = {
         "*".installation_mode =
           "blocked"; # blocks all addons except the ones specified below
@@ -32,8 +40,49 @@
           installation_mode = "force_installed";
 
         };
+        # Bypass Paywalls Clean
+        "magnolia@12.34" = {
+          install_url =
+            "https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass_paywalls_clean-4.1.2.0.xpi";
+          installation_mode = "force_installed";
+        };
+
+        # Sponsorblock
+        "sponsorBlocker@ajay.app" = {
+          install_url =
+            "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+          installation_mode = "force_installed";
+
+        };
+
+        # Youtube anti translate
+        "{458160b9-32eb-4f4c-87d1-89ad3bdeb9dc}" = {
+          install_url =
+            "https://addons.mozilla.org/firefox/downloads/latest/youtube-anti-translate/latest.xpi";
+          installation_mode = "force_installed";
+
+        };
       };
-      DNSOverHTTPS = { Enabled = true; };
+      Preferences = {
+        # Set DNS Over HTTPS
+        "network.trr" = {
+          mode = 3;
+          uri = "https://cloudflare-dns.com/dns-query";
+        };
+
+        # Remove trash from homepage
+        "browser.newtabpage.activity-stream" = {
+          "feeds.section" = { topstories = false; };
+          showSponsoredTopSites = false;
+          showSponsored = false;
+        };
+
+        # Remove firefox accounts button from toolbar
+        "identity.fxaccounts.toolbar.enabled" = false;
+
+        # Remove AI Chat
+        "browser.ml.enabled" = false;
+      };
     };
     profiles.teko = {
       search = {
