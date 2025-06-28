@@ -6,6 +6,7 @@
     ./desktop/hypr/hyprland.nix
     ./desktop/gnome.nix
     ./desktop/librewolf.nix
+    ./desktop/zed.nix
     ./kitty.nix
     ./cli/fish.nix
     ./cli/git.nix
