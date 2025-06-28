@@ -94,6 +94,7 @@
         bluetooth-battery-meter.extensionUuid
         appindicator.extensionUuid
         vitals.extensionUuid
+        tailscale-qs.extensionUuid
       ];
     };
 

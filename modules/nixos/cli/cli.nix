@@ -3,6 +3,8 @@
 
   programs.fish.enable = true;
   programs.starship.enable = true;
+  services.tailscale.enable = true;
+  #system.activationScripts.script.text = "tailscale --set owner=teko";
 
   environment.systemPackages = with pkgs; [
     nixd # Nix language server
@@ -27,5 +29,6 @@
     eza
     jq
     rm-improved
+
   ];
 }

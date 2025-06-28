@@ -32,6 +32,7 @@
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
+    gnomeExtensions.tailscale-qs
     gnome-tweaks
   ];
 
