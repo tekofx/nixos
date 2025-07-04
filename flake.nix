@@ -15,12 +15,12 @@
     zen-browser.url = "github:youwen5/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Stylix
+    stylix.url = "github:danth/stylix/release-25.05";
+
     # Hyprpanel
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Stylix
-    stylix.url = "github:danth/stylix/release-25.05";
 
     # Poly MC
     polymc.url = "github:PolyMC/PolyMC";
@@ -45,10 +45,7 @@
           # Home manager
           inputs.home-manager.nixosModules.default
 
-          {
-            nixpkgs.overlays =
-              [ inputs.hyprpanel.overlay inputs.polymc.overlay ];
-          }
+          { nixpkgs.overlays = [ inputs.polymc.overlay ]; }
         ];
       };
 

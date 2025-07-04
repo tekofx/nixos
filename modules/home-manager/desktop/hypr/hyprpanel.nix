@@ -1,14 +1,13 @@
 { inputs, pkgs, ... }: {
 
   home.stateVersion = "25.05";
-  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
+  #imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 
   programs.hyprpanel = {
     enable = true;
-    hyprland.enable = true;
-    overwrite.enable = true;
 
     settings = {
+
       layout = {
         bar = {
           "launcher.icon" = "󱄅";
