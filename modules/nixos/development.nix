@@ -6,6 +6,7 @@
     android-studio
     bruno
     nil
+    nerd-fonts.roboto-mono
 
   ];
 

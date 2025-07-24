@@ -18,9 +18,6 @@
     # Stylix
     stylix.url = "github:danth/stylix/release-25.05";
 
-    # Hyprpanel
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
     # Poly MC
     polymc.url = "github:PolyMC/PolyMC";
