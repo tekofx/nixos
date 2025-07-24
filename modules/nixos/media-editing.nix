@@ -1,6 +1,6 @@
 # btop install
 { pkgs, ... }: {
 
-  environment.systemPackages = with pkgs; [ tenacity obs-studio gimp darktable ];
+  environment.systemPackages = with pkgs; [ tenacity obs-studio gimp darktable pitivi ];
 
 }
