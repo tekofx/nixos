@@ -5,13 +5,16 @@
     kitty
     telegram-desktop
     discord
-    spotify
     qbittorrent
     inputs.zen-browser.packages.${system}.default
-    vlc
-    stremio
     calibre
     librewolf
+    carburetor
+    gradia
+    eyedropper
+    qmapshack
+    obsidian
+
 
     # Hyprland
     hyprland
@@ -53,6 +56,7 @@
     ../gaming.nix
     ../development.nix
     ../media-editing.nix
+    ../multimedia.nix
   ];
 
 }

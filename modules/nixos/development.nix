@@ -5,12 +5,11 @@
     zed-editor
     android-studio
     bruno
-
     nil
 
   ];
 
   services.flatpak.packages =
-    [ "io.github.MakovWait.Godots" "com.github.finefindus.eyedropper" ];
+    [ "io.github.MakovWait.Godots" ];
 
 }
