@@ -48,6 +48,7 @@
       switch-to-workspace-2 = [ "<Super>2" ];
       switch-to-workspace-3 = [ "<Super>3" ];
       switch-to-workspace-4 = [ "<Super>4" ];
+      toggle-fullscreen = [ "F11" ];
     };
 
     # Interactive screenshot
@@ -77,7 +78,6 @@
         "zen.desktop"
         "kitty.desktop"
         "android-studio.desktop"
-        "codium.desktop"
         "webstorm.desktop"
         "bruno.desktop"
         "org.telegram.desktop.desktop"

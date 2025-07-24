@@ -90,14 +90,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Enable the Flakes feature 
+  # Enable the Flakes feature
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # UI 
-    vscodium
+    # UI
     kitty
     zed-editor
     telegram-desktop
