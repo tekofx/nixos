@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     zed-editor
     android-studio
-    jetbrains.webstorm
     bruno
 
     nil
