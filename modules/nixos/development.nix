@@ -7,6 +7,8 @@
     jetbrains.webstorm
     bruno
 
+    nil
+
   ];
 
   services.flatpak.packages =

@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     nixd # Nix language server
+    xdg-desktop-portal-gtk
     os-prober
     btop
     micro
