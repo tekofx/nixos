@@ -11,7 +11,7 @@
         --ansi
         --info=inline
         --height=70%
-        --layout=reverse 
+        --layout=reverse
         --preview-window='right:hidden:wrap:60%'
         --bind='f2:toggle-preview'
         --bind='alt-w:preview-page-up'
@@ -19,9 +19,12 @@
         --preview 'bat --color=always --style=header,grid --line-range :300 {}'
       "
 
+      set PATH ~/go/bin/ $PATH
+
       navi widget fish | source
 
     '';
+
 
     shellAliases = {
       # Docker
