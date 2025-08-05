@@ -7,6 +7,8 @@
     bruno
     nil
     nerd-fonts.roboto-mono
+    devenv
+    direnv
 
   ];
 
