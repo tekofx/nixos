@@ -77,7 +77,7 @@
         "org.gnome.Nautilus.desktop"
         "zen.desktop"
         "kitty.desktop"
-        "zed.desktop"
+        "dev.zed.Zed.desktop"
         "android-studio.desktop"
         "bruno.desktop"
         "org.telegram.desktop.desktop"
