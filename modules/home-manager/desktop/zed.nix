@@ -19,6 +19,13 @@
       autosave = "on_focus_change";
       format_on_save = "on";
       collaboration_panel = { button = false; };
+
+      languages = {
+        Nix = {
+          language_servers = [ "nil" "!nixd" ];
+          formatter = { external = { command = "nixfmt"; }; };
+        };
+      };
     };
 
     userKeymaps = [
