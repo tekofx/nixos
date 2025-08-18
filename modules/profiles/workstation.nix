@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{  ... }: {
 
   ## Modules to import
   imports = [

@@ -1,5 +1,5 @@
 # Power management settings
-{ config, lib, pkgs, inputs, ... }:
+{ ... }:
 
 {
   config = {

@@ -6,7 +6,7 @@
     vlc
     stremio
     spotify
-
+    kodi
   ];
 
   services.flatpak.packages =

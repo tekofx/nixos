@@ -1,5 +1,5 @@
 # btop install
-{ config, lib, pkgs, inputs, ... }: {
+{  pkgs, inputs, ... }: {
 
   environment.systemPackages = with pkgs; [
     kitty
@@ -52,11 +52,7 @@
     ./gnome.nix
     ./hyprland.nix
 
-    # Programs
-    ../gaming.nix
-    ../development.nix
-    ../media-editing.nix
-    ../multimedia.nix
+
   ];
 
 }

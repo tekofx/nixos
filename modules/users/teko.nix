@@ -1,4 +1,11 @@
-{ pkgs, lib, config, inputs, home-manager, ... }: {
+{ pkgs, inputs,  ... }: {
+
+  imports=[
+    ../nixos/gaming.nix
+    ../nixos/development.nix
+    ../nixos/media-editing.nix
+    ../nixos/multimedia.nix
+  ];
 
   ## Configuration
   config = {
@@ -15,13 +22,16 @@
       home = "/home/teko";
       group = "teko";
       initialPassword = "12345";
-      description = "teko";
+      name = "teko";
+      description = "Teko";
       shell = pkgs.fish;
       createHome = true;
       extraGroups = [ "networkmanager" "wheel" "docker" ];
       openssh.authorizedKeys.keys = [ ];
     };
     home-manager.users.teko = import ../home-manager/home-manager.nix;
+
+
 
   };
 }
