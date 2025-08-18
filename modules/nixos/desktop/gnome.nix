@@ -31,6 +31,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.bluetooth-battery-meter
     gnomeExtensions.appindicator
+    gnomeExtensions.auto-move-windows
     gnomeExtensions.vitals
     gnomeExtensions.tailscale-qs
     gnome-tweaks

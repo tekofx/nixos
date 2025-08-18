@@ -89,6 +89,7 @@
 
       enabled-extensions = with pkgs.gnomeExtensions; [
         caffeine.extensionUuid
+        auto-move-windows.extensionUuid
         media-controls.extensionUuid
         dash-to-dock.extensionUuid
         bluetooth-battery-meter.extensionUuid
@@ -99,6 +100,17 @@
     };
 
     ############################ Extensions config ############################
+    "org/gnome/shell/extensions/auto-move-windows"={
+      application-list=[
+        "dev.zed.Zed.desktop:1"
+        "zen.desktop:2"
+        "spotify.desktop:3"
+        "bruno.desktop:3"
+        "discord.desktop:4"
+        "org.telegram.desktop.desktop:4"
+      ];
+
+    };
     "org/gnome/shell/extensions/mediacontrols" = {
       elements-order = [ "ICON" "CONTROLS" "LABEL" ];
       show-control-icons-seek-backward = false;
