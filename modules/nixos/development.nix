@@ -12,9 +12,9 @@
     nerd-fonts.roboto-mono
     devenv
     direnv
+    python314
   ];
 
-  services.flatpak.packages =
-    [ "io.github.MakovWait.Godots" ];
+  services.flatpak.packages = [ "io.github.MakovWait.Godots" ];
 
 }
