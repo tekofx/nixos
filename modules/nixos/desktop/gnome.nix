@@ -35,6 +35,7 @@
     gnomeExtensions.vitals
     gnomeExtensions.tailscale-qs
     gnome-tweaks
+    gnomeExtensions.app-grid-wizard
   ];
 
 }

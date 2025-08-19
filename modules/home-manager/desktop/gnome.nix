@@ -96,12 +96,13 @@
         appindicator.extensionUuid
         vitals.extensionUuid
         tailscale-qs.extensionUuid
+        app-grid-wizard.extensionUuid
       ];
     };
 
     ############################ Extensions config ############################
-    "org/gnome/shell/extensions/auto-move-windows"={
-      application-list=[
+    "org/gnome/shell/extensions/auto-move-windows" = {
+      application-list = [
         "dev.zed.Zed.desktop:1"
         "zen.desktop:2"
         "spotify.desktop:3"
