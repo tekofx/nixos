@@ -2,6 +2,8 @@
 
   nix.settings.trusted-users = [ "root" "teko" ];
 
+  imports = [ ./lang.nix ];
+
   environment.systemPackages = with pkgs; [
     zed-editor
     android-studio
@@ -12,7 +14,6 @@
     nerd-fonts.roboto-mono
     devenv
     direnv
-    python314
   ];
 
   services.flatpak.packages = [ "io.github.MakovWait.Godots" ];
