@@ -12,8 +12,10 @@
     eyedropper
     qmapshack
     obsidian
+    localsend
+    pika-backup
+    bottles
   ];
-  services.flatpak.packages =
-    [ "com.usebottles.bottles" "io.github.brunofin.Cohesion" ];
+  services.flatpak.packages = [ "io.github.brunofin.Cohesion" ];
 
 }
