@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ ... }: {
 
   ## Modules to import
   imports = [
