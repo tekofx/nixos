@@ -1,12 +1,5 @@
 { pkgs, inputs, ... }: {
 
-  imports = [
-    ../nixos/gaming.nix
-    ../nixos/development.nix
-    ../nixos/media-editing.nix
-    ../nixos/multimedia.nix
-  ];
-
   ## Configuration
   config = {
 

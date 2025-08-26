@@ -1,8 +1,5 @@
 { pkgs, inputs, ... }: {
 
-  ## Modules to import
-  imports = [ ../nixos/development.nix ];
-
   ## Configuration
   config = {
     home-manager.useGlobalPkgs = true;
