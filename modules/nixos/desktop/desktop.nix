@@ -1,10 +1,8 @@
 # btop install
-{  pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }: {
 
   environment.systemPackages = with pkgs; [
     kitty
-    telegram-desktop
-    discord
     qbittorrent
     inputs.zen-browser.packages.${system}.default
     calibre
@@ -14,17 +12,6 @@
     eyedropper
     qmapshack
     obsidian
-
-
-    # Hyprland
-    hyprland
-    hyprpaper
-    wofi
-    hyprpanel
-    nerd-fonts.roboto-mono
-    grim
-    slurp
-    wl-clipboard
   ];
 
   # Stylix
@@ -52,7 +39,13 @@
     ./gnome.nix
     ./hyprland.nix
 
-
+    # Desktop programs
+    ../gaming.nix
+    ../communucation.nix
+    ../development.nix
+    ../media-editing.nix
+    ../multimedia.nix
+    ../utilies.nix
   ];
 
 }
