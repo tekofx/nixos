@@ -1,6 +1,6 @@
-{ pkgs, inputs,  ... }: {
+{ pkgs, inputs, ... }: {
 
-  imports=[
+  imports = [
     ../nixos/gaming.nix
     ../nixos/development.nix
     ../nixos/media-editing.nix
@@ -9,6 +9,11 @@
 
   ## Configuration
   config = {
+    development = {
+      android = true;
+      go = true;
+    };
+
     home-manager.useGlobalPkgs = true;
     home-manager.extraSpecialArgs = { inherit inputs; };
     home-manager.backupFileExtension = "back";
@@ -30,8 +35,6 @@
       openssh.authorizedKeys.keys = [ ];
     };
     home-manager.users.teko = import ../home-manager/home-manager.nix;
-
-
 
   };
 }

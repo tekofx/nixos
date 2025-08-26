@@ -1,13 +1,10 @@
-{ pkgs, inputs,  ... }: {
+{ pkgs, inputs, ... }: {
 
   ## Modules to import
-  imports= [
-    ../nixos/development.nix
-  ];
+  imports = [ ../nixos/development.nix ];
 
   ## Configuration
   config = {
-
     home-manager.useGlobalPkgs = true;
     home-manager.extraSpecialArgs = { inherit inputs; };
     home-manager.backupFileExtension = "back";
@@ -22,7 +19,7 @@
 
       group = "work";
       initialPassword = "12345";
-      name="work";
+      name = "work";
       description = "Work";
       shell = pkgs.fish;
       createHome = true;
@@ -30,7 +27,6 @@
       openssh.authorizedKeys.keys = [ ];
     };
     home-manager.users.work = import ../home-manager/home-manager.nix;
-
 
   };
 }
