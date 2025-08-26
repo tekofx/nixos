@@ -2,9 +2,9 @@
 {
   # Feature flags
   development = {
-    enableAndroid = true;
+    enableAndroid = false;
     enableGo = true;
-    enableJava = true;
-    enableGodot = true;
+    enableJava = false;
+    enableGodot = false;
   };
 }
