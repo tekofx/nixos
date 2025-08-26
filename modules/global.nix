@@ -5,10 +5,10 @@
 { ... }: {
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  development = {
-    android = true;
-    go = true;
-  };
+  # development = {
+  #   android = true;
+  #   go = true;
+  # };
 
   # Enable networking
   networking.networkmanager.enable = true;

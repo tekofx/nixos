@@ -1,4 +1,28 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+let
+  settings = import ../../config/settings.nix;
+  dev = settings.development;
+  # Full list of favorite apps, with conditional insertion
+  jetbrainsIdea = lib.optionals dev.enableJava [ "idea-community.desktop" ];
+  androidStudio = lib.optionals dev.enableAndroid [ "android-studio.desktop" ];
+  godots =
+    lib.optionals dev.enableGodot [ "io.github.MakovWait.Godots.desktop" ];
+  favorite-apps = let
+    firstApps = [
+      "org.gnome.Nautilus.desktop"
+      "zen.desktop"
+      "kitty.desktop"
+      "dev.zed.Zed.desktop"
+    ];
+    afterApps = [
+      "bruno.desktop"
+      "org.telegram.desktop.desktop"
+      "discord.desktop"
+      "spotify.desktop"
+    ];
+  in firstApps ++ androidStudio ++ jetbrainsIdea ++ godots ++ afterApps;
+
+in {
 
   home.stateVersion = "25.05";
 
@@ -72,19 +96,9 @@
     };
 
     ############################ Gnome Shell ############################
-    "org/gnome/shell" = {
-      favorite-apps = [
-        "org.gnome.Nautilus.desktop"
-        "zen.desktop"
-        "kitty.desktop"
-        "dev.zed.Zed.desktop"
-        "android-studio.desktop"
-        "bruno.desktop"
-        "org.telegram.desktop.desktop"
-        "discord.desktop"
-        "spotify.desktop"
-      ];
+    "org/gnome/shell" = { favorite-apps = favorite-apps; };
 
+    "org/gnome/shell" = {
       disable-user-extensions = false;
 
       enabled-extensions = with pkgs.gnomeExtensions; [
@@ -98,6 +112,7 @@
         tailscale-qs.extensionUuid
         app-grid-wizard.extensionUuid
       ];
+
     };
 
     ############################ Extensions config ############################

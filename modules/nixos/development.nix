@@ -1,15 +1,11 @@
 { pkgs, lib, config, ... }:
 with lib;
 
-let cfg = config.development;
-in {
+let
+  settings = import ../config/settings.nix;
+  dev = settings.development;
 
-  options.development = {
-    android = mkEnableOption "Android packages";
-    go = mkEnableOption "Golang packages";
-    godot = mkEnableOption "Godot packages";
-    java = mkEnableOption "Java packages";
-  };
+in {
 
   config = lib.mkMerge [
     {
@@ -21,15 +17,15 @@ in {
         bruno
       ];
     }
-    (lib.mkIf cfg.android {
+    (lib.mkIf dev.enableAndroid {
       environment.systemPackages = with pkgs; [ android-studio ];
     })
-    (lib.mkIf cfg.go { environment.systemPackages = with pkgs; [ go ]; })
-    (lib.mkIf cfg.godot {
+    (lib.mkIf dev.enableGo { environment.systemPackages = with pkgs; [ go ]; })
+    (lib.mkIf dev.enableGodot {
       services.flatpak.packages = [ "io.github.MakovWait.Godots" ];
       environment.systemPackages = with pkgs; [ libresprite ];
     })
-    (lib.mkIf cfg.java {
+    (lib.mkIf dev.enableJava {
       environment.systemPackages = with pkgs; [ jetbrains.idea-community ];
     })
   ];
