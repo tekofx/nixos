@@ -9,10 +9,6 @@
 
   ## Configuration
   config = {
-    development = {
-      android = true;
-      go = true;
-    };
 
     home-manager.useGlobalPkgs = true;
     home-manager.extraSpecialArgs = { inherit inputs; };
