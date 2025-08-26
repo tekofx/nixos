@@ -7,6 +7,7 @@
     ./desktop/gnome.nix
     ./desktop/librewolf.nix
     ./desktop/zed.nix
+    ./desktop/kodi.nix
     ./kitty.nix
     ./cli/fish.nix
     ./cli/git.nix
